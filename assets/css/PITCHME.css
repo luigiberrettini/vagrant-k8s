@@ -24,7 +24,7 @@
 .reveal .slides section > h2:first-child {
     color: #ffffff;
     text-transform: none;
-    margin: 0 -25%;
+    margin: 0 -25% 40px -25%;
     padding: 0 25%;
     background-color: #316ce6;
     background-image: url('https://raw.githubusercontent.com/kubernetes/kubernetes/master/logo/logo_with_border.png');
@@ -56,6 +56,12 @@
     .reveal .slides section > h2:first-child {
         background-position: center right 2%;
     }
+}
+
+.reveal .slides section ol,
+.reveal .slides section dl,
+.reveal .slides section ul {
+    margin: -0.3em 0 0 2em;
 }
 
 .reveal .slides section img {

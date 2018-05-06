@@ -20,3 +20,18 @@
 <br /><br />
 ![Containers](assets/img/02-containers.png)
 @divend
+
+---
+
+## Process isolation
+
+**Resource usage** is limited with **cgroups** (control groups)
+<br />
+<br />
+**Resource access** is limited with **namespaces** i.e. a process belongs to a namespace for each type:
+ - ipc
+ - mnt
+ - net
+ - pid
+ - user
+ - uts (UNIX Timesharing System)
