@@ -1,0 +1,133 @@
+.reveal .slides section {
+    padding: 2%;
+    width: 96%;
+    font-size: 0.9em;
+    text-align: left;
+}
+
+.reveal .slides section:first-child,
+.reveal .slides section:nth-child(2) {
+    text-align: center;
+}
+
+.reveal .slides section:first-child h1,
+.reveal .slides section:nth-child(2) h1 {
+    font-weight: bold;
+    margin-top: 25%;
+    text-transform: none;
+}
+
+.reveal .slides section:first-child p a {
+    color: #afdfff;
+}
+
+.reveal .slides section > h2:first-child {
+    color: #ffffff;
+    text-transform: none;
+    margin: 0 -25%;
+    padding: 0 25%;
+    background-color: #316ce6;
+    background-image: url('https://raw.githubusercontent.com/kubernetes/kubernetes/master/logo/logo_with_border.png');
+    background-repeat: no-repeat;
+    background-size: 5%;
+    background-position: center right 18%;
+}
+
+@media screen and (min-aspect-ratio: 23/18) and (orientation: landscape),
+@media screen and (min-aspect-ratio: 18/36) and (orientation: portrait) {
+    .reveal .slides section > h2:first-child {
+        background-position: center right 18%;
+    }
+}
+
+@media screen and (min-aspect-ratio: 27/18) and (orientation: landscape) {
+    .reveal .slides section > h2:first-child {
+        background-position: center right 11%;
+    }
+}
+
+@media screen and (min-aspect-ratio: 31/18) and (orientation: landscape) {
+    .reveal .slides section > h2:first-child {
+        background-position: center right 8%;
+    }
+}
+
+@media screen and (min-aspect-ratio: 35/18) and (orientation: landscape) {
+    .reveal .slides section > h2:first-child {
+        background-position: center right 2%;
+    }
+}
+
+.reveal .slides section img {
+    border: none;
+    box-shadow: none;
+}
+
+.reveal #title-footer {
+    display: none;
+}
+
+.reveal .backgrounds > .slide-background:not(.data-background-hash):first-child {
+    background-color: #316ce6;
+    background-image: url('https://raw.githubusercontent.com/kubernetes/kubernetes/master/logo/logo_with_border.png');
+    background-repeat: no-repeat;
+    background-position: top 2% right 10%;
+    background-size: 14%;
+}
+
+.reveal .backgrounds > .slide-background:not(.data-background-hash):nth-child(2) {
+    background-color: #000000;
+}
+
+.reveal .progress {
+    display: none !important;
+}
+
+.reveal .controls {
+    bottom: 1px;
+}
+
+.reveal .controls[data-controls-back-arrows="faded"] .navigate-left.enabled,
+.reveal .controls[data-controls-back-arrows="faded"] .navigate-up.enabled {
+    color: #000000;
+    opacity: 0.4;
+}
+
+.reveal .controls[data-controls-back-arrows="faded"] .navigate-left.enabled:hover,
+.reveal .controls[data-controls-back-arrows="faded"] .navigate-up.enabled:hover {
+    opacity: 0.6;    
+}
+
+.reveal .controls[data-controls-back-arrows="faded"] .navigate-right.enabled,
+.reveal .controls[data-controls-back-arrows="faded"] .navigate-down.enabled {
+    color: #000000;
+    opacity: 0.8;
+}
+
+.reveal .controls[data-controls-back-arrows="faded"] .navigate-right.enabled:hover,
+.reveal .controls[data-controls-back-arrows="faded"] .navigate-down.enabled:hover {
+    opacity: 1;
+}
+
+.reveal.has-dark-background .controls[data-controls-back-arrows="faded"] .navigate-left.enabled,
+.reveal.has-dark-background .controls[data-controls-back-arrows="faded"] .navigate-up.enabled,
+.reveal.has-dark-background .controls[data-controls-back-arrows="faded"] .navigate-right.enabled,
+.reveal.has-dark-background .controls[data-controls-back-arrows="faded"] .navigate-down.enabled {
+    color: #ffffff;
+}
+
+.reveal .slide-number {
+    display: none !important;
+}
+
+.gp-menu .slide-menu-button {
+    bottom: 15px !important;
+}
+
+.gp-menu .slide-menu-button .gp-menu-bars.fa.fa-bars {
+    color: #aaaaaa;
+    opacity: 0.5;
+}
+.gp-menu .slide-menu-button .gp-menu-bars.fa.fa-bars:hover {
+    opacity: 0.75;
+}
