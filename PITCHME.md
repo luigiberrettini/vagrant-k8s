@@ -192,3 +192,13 @@ Greek word meaning helmsman
  - Containers share the pod Linux namespace set:
     - pid sharing must be enabled
     - they share IP address (port conflicts)
+
+---
+
+## Descriptor
+<br />
+ - Kubernetes **API version** used
+ - **Type of resource** being described
+ - **Metadata**: name, namespace, labels, and other info
+ - **Spec**: description of its contents<br />(e.g. containers and volumes)
+ - **Status**: info about the running pod<br />(e.g. condition, details about containers, IP)
