@@ -1,11 +1,11 @@
 ---
 
-# Kubernetes intro
+# Kubernetes primer
 [@fa[twitter] @luigiberrettini](http://twitter.com/luigiberrettini)
 
 ---
 
-# Overview
+# Introduction
 
 ---
 
