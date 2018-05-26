@@ -52,14 +52,14 @@
         </ul>
         </small>
     @divend
-    
+
     @div
         <p></p>
         **Registry**
         <br />
         <small>A repository of images</small>
     @divend
-    
+
     @div
         **Container**
         <br />
@@ -126,3 +126,43 @@ Provides features missing in Docker:
 Greek word meaning helmsman
 <br />
 ![Helmsman](assets/img/04-helmsman.png)
+
+---
+
+## Architecture
+@div[left-30]
+    @div
+        <br />
+        <small>
+            <strong>Master components<br />(control plane)</strong>
+            <ul>
+                <li>kube-apiserver</li>
+                <li>etcd</li>
+                <li>kube-scheduler<br />(etcd: leader election)</li>
+                <li>controller-manager<br />(etcd: leader election)</li>
+            </ul>
+        </small>
+    @divend
+
+    @div
+        <p></p>
+        <small>
+            <strong>Node components</strong>
+            <ul>
+                <li>kube-proxy</li>
+                <li>kubelet</li>
+                <li>container runtime</li>
+            </ul>
+        </small>
+    @divend
+@divend
+
+@div[right-70]
+<br />
+![K8s architecture](assets/img/05-k8s-architecture.png)
+@divend
+
+---
+
+## API resources
+![K8s API resources](assets/img/06-k8s-api-resources.png)
