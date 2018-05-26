@@ -91,3 +91,26 @@ docker container exec -ti dkr-demo ls -Al
 
 docker container stop dkr-demo
 ```
+
+---
+
+## Container orchestration
+<br />
+Provides features missing in Docker:
+ - deploy of application stacks
+ - health checking and self-healing
+ - containers HA (active-active or active-passive)
+ - scaling (static or dynamic)
+ - groups/users and resource scoping
+ - multi-tenancy
+ - clustering and optimal hardware utilization
+
+---
+
+## Orchestrators
+<br />
+<br />
+ - Swarm
+ - Mesos (general purpose cluster manager)
+ - vanilla Kubernetes
+ - Kubernetes distribution (e.g. OpenShift, Tectonic)
