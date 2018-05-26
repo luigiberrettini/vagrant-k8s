@@ -166,3 +166,29 @@ Greek word meaning helmsman
 
 ## API resources
 ![K8s API resources](assets/img/06-k8s-api-resources.png)
+
+---
+
+# Pod
+
+---
+
+## Definition
+<br />
+ - Group of one or more co-located tightly related containers
+ - Runs on a single worker node
+ - Runnable whole: containers always run together
+ - Allows to run only one process per container
+ - Lives in a flat shared network-address space<br />(direct access via IP, no NAT)
+
+---
+
+## Multiple containers
+<br />
+ - When there is a main process and complementary processes
+ - Not when containers can run on different host
+ - Not when containers must be scaled individually
+ - Containers do not share filesystem
+ - Containers share the pod Linux namespace set:
+    - pid sharing must be enabled
+    - they share IP address (port conflicts)
