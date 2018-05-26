@@ -118,3 +118,11 @@ Provides features missing in Docker:
 ---
 
 # Kubernetes overview
+
+---
+
+## The name
+
+Greek word meaning helmsman
+<br />
+![Helmsman](assets/img/04-helmsman.png)
