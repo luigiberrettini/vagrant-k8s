@@ -114,3 +114,7 @@ Provides features missing in Docker:
  - Mesos (general purpose cluster manager)
  - vanilla Kubernetes
  - Kubernetes distribution (e.g. OpenShift, Tectonic)
+
+---
+
+# Kubernetes overview

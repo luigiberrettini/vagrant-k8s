@@ -6,12 +6,14 @@
 }
 
 .reveal .slides section:first-child,
-.reveal .slides section:nth-child(2) {
+.reveal .slides section:nth-child(2),
+.reveal .slides section:nth-child(9) {
     text-align: center;
 }
 
 .reveal .slides section:first-child h1,
-.reveal .slides section:nth-child(2) h1 {
+.reveal .slides section:nth-child(2) h1,
+.reveal .slides section:nth-child(9) h1 {
     font-weight: bold;
     margin-top: 25%;
     text-transform: none;
@@ -97,7 +99,8 @@
     background-size: 14%;
 }
 
-.reveal .backgrounds > .slide-background:not(.data-background-hash):nth-child(2) {
+.reveal .backgrounds > .slide-background:not(.data-background-hash):nth-child(2),
+.reveal .backgrounds > .slide-background:not(.data-background-hash):nth-child(9) {
     background-color: #000000;
 }
 
