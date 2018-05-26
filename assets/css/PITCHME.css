@@ -70,9 +70,14 @@
     margin: 0.3em 0 0 2em;
 }
 
-.reveal .slides section code {
-    margin-left: 7px;
-    margin-right: 7px;
+.reveal .slides section pre {
+    width: 100%;
+    box-shadow: none;
+}
+
+.reveal .slides section pre code {
+    margin-left: 0;
+    margin-right: 0;
 }
 
 .reveal .slides section img {

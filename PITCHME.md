@@ -76,3 +76,18 @@
 <br />
 ![Docker Image and containers](assets/img/03-docker-image-containers.png)
 @divend
+
+---
+
+## Docker container demo
+<br />
+<br />
+```shell
+docker container run -d -p 8080:8080 --name dkr-demo luksa/kubia:v1
+
+docker container logs dkr-demo
+
+docker container exec -ti dkr-demo ls -Al
+
+docker container stop dkr-demo
+```
