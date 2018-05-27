@@ -169,11 +169,11 @@ Greek word meaning helmsman
 
 ---
 
-# Pod
+# Pods
 
 ---
 
-## Definition
+## Pod definition and qualities
 <br />
  - Group of one or more co-located tightly related containers
  - Runs on a single worker node
@@ -215,11 +215,11 @@ kubectl create -f - <<EOF
 apiVersion: v1
 kind: Pod
 metadata:
-  name: kubiaP-v1
+  name: basic-pod
 spec:
   containers:
     - image: luksa/kubia:v1
-      name: kubiaC-v1
+      name: cntnr
       ports:
         - containerPort: 8012
           protocol: TCP
@@ -233,14 +233,14 @@ EOF
 <div class="spacer">&nbsp;</div>
 ```shell
 kubectl get pods
-kubectl get po kubiaP-v1 -o yaml
-kubectl get po kubiaP-v1 -o json
-kubectl describe po kubiaP-v1
+kubectl get po basic-pod -o yaml
+kubectl get po basic-pod -o json
+kubectl describe po basic-pod
 
-kubectl port-forward kubiaP-v1 8000:8012
+kubectl port-forward basic-pod 8000:8012
 curl localhost:8000
 
-kubectl logs kubiaP-v1 -c kubiaC-v1
+kubectl logs basic-pod -c cntnr
 
-kubectl delete po kubiaP-v1
+kubectl delete po basic-pod
 ```

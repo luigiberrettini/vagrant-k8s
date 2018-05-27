@@ -1,1 +1,3 @@
 Vagrantfile eol=lf
+*.sh eol=lf
+*.yaml eol=lf
