@@ -62,6 +62,10 @@
     }
 }
 
+.reveal .slides section .spacer {
+    line-height: 0.5em;
+}
+
 .reveal .slides section ol,
 .reveal .slides section dl,
 .reveal .slides section ul {
@@ -80,8 +84,7 @@
 }
 
 .reveal .slides section pre code {
-    margin-left: 0;
-    margin-right: 0;
+    max-height: 500px;
 }
 
 .reveal .slides section img {

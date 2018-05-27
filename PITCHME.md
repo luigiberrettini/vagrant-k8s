@@ -202,3 +202,45 @@ Greek word meaning helmsman
  - **Metadata**: name, namespace, labels, and other info
  - **Spec**: description of its contents<br />(e.g. containers and volumes)
  - **Status**: info about the running pod<br />(e.g. condition, details about containers, IP)
+
+---
+
+## Creation demo
+<div class="spacer">&nbsp;</div>
+```shell
+kubectl explain pods
+kubectl explain pods.spec
+
+kubectl create -f - <<EOF
+apiVersion: v1
+kind: Pod
+metadata:
+  name: kubiaP-v1
+spec:
+  containers:
+    - image: luksa/kubia:v1
+      name: kubiaC-v1
+      ports:
+        - containerPort: 8012
+          protocol: TCP
+EOF
+```
+
+---
+
+## Common operations demo
+<div class="spacer">&nbsp;</div>
+<div class="spacer">&nbsp;</div>
+```shell
+kubectl get pods
+kubectl get po kubiaP-v1 -o yaml
+kubectl get po kubiaP-v1 -o json
+kubectl describe po kubiaP-v1
+
+kubectl port-forward kubiaP-v1 8000:8012
+curl localhost:8000
+
+kubectl logs kubiaP-v1 -c kubiaC-v1
+
+kubectl delete po kubiaP-v1
+```
