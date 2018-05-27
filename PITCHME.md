@@ -253,9 +253,9 @@ kubectl delete po basic-pod
 ## Labels
 <br />
  - Key-value pairs to be attached to a resource
- - Allow organization/categorization of resources
  - A resource can have multiple labels
- - Label key must be unique within a resource
+ - Label keys must be unique within a resource
+ - Allow organization/categorization of resources
  - **Label selectors** allow resource filtering:
     - to apply actions on a group of them
     - to customize behavior (e.g. `nodeSelector` to schedule pods by node capabilities)
@@ -326,6 +326,32 @@ kubectl get po -l app!=LApp
 # multiple selectors
 kubectl get po -l team=A-Team,kind=FrontOffice
 
-
 kubectl delete po -l 'team'
+```
+
+---
+
+## Annotations
+<br />
+ - Key-value pairs to be attached to a resource
+ - A resource can have multiple annotations
+ - Annotation keys must be unique within a resource
+ - Not meant to group resources
+ - There are **no annotation selectors**
+ - Meant to store lots of information to be used by tools
+ - Used to not modify resources when introducing alpha/beta K8s features
+
+---
+
+## Annotations demo
+<br />
+<br />
+```shell
+kubectl create -f 02-basic-pod.yaml
+
+kubectl annotate pod basic-pod cmpny.com/annKey="annValue"
+
+kubectl describe po basic-pod
+
+kubectl delete po basic-pod
 ```
