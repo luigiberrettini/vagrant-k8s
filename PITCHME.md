@@ -229,8 +229,7 @@ EOF
 ---
 
 ## Common operations demo
-<div class="spacer">&nbsp;</div>
-<div class="spacer">&nbsp;</div>
+<br />
 ```shell
 kubectl get pods
 kubectl get po basic-pod -o yaml
@@ -243,4 +242,90 @@ curl localhost:8000
 kubectl logs basic-pod -c cntnr
 
 kubectl delete po basic-pod
+```
+
+---
+
+# Labels<br />Annotations<br />Namespaces
+
+---
+
+## Labels
+<br />
+ - Key-value pairs to be attached to a resource
+ - Allow organization/categorization of resources
+ - A resource can have multiple labels
+ - Label key must be unique within a resource
+ - **Label selectors** allow resource filtering:
+    - to apply actions on a group of them
+    - to customize behavior (e.g. `nodeSelector` to schedule pods by node capabilities)
+
+---
+
+## Labels on creation demo
+```shell
+kubectl create -f - <<EOF
+apiVersion: v1
+kind: Pod
+metadata:
+  name: labeled-pod
+  labels:
+    app: LApp
+    kind: FrontOffice
+    team: A-Team
+spec:
+  containers:
+    - image: luksa/kubia:v1
+      name: cntnr
+      ports:
+        - containerPort: 8012
+          protocol: TCP
+EOF
+
+kubectl get po --show-labels
+kubectl get po -L kind,team
+```
+
+---
+
+## Labels after creation demo
+<br />
+<br />
+```shell
+kubectl create -f 02-basic-pod.yaml
+kubectl get po --show-labels
+
+kubectl label po basic-pod app=BApp
+kubectl label po basic-pod team=HappyDays
+kubectl get po --show-labels
+
+kubectl label po basic-pod team=A-Team --overwrite
+kubectl get po --show-labels
+```
+
+---
+
+## Label selectors demo
+<div class="spacer">&nbsp;</div>
+```shell
+# key == k or key != k
+kubectl get po -l 'team'
+kubectl get po -l '!team'
+
+
+# key in/not in a set
+kubectl get po -l app in (BApp, LApp)
+kubectl get po -l app notin (BApp, MyApp)
+
+
+# value == v or value != v
+kubectl get po -l app=LApp
+kubectl get po -l app!=LApp
+
+
+# multiple selectors
+kubectl get po -l team=A-Team,kind=FrontOffice
+
+
+kubectl delete po -l 'team'
 ```

@@ -8,17 +8,23 @@
 .reveal .slides section:first-child,
 .reveal .slides section:nth-child(2),
 .reveal .slides section:nth-child(9),
-.reveal .slides section:nth-child(13) {
+.reveal .slides section:nth-child(13),
+.reveal .slides section:nth-child(19) {
     text-align: center;
 }
 
 .reveal .slides section:first-child h1,
 .reveal .slides section:nth-child(2) h1,
 .reveal .slides section:nth-child(9) h1,
-.reveal .slides section:nth-child(13) h1 {
+.reveal .slides section:nth-child(13) h1,
+.reveal .slides section:nth-child(19) h1 {
     font-weight: bold;
     margin-top: 25%;
     text-transform: none;
+}
+
+.reveal .slides section:nth-child(19) h1 {
+    margin-top: 15%;
 }
 
 .reveal .slides section:first-child p a {
@@ -106,7 +112,8 @@
 
 .reveal .backgrounds > .slide-background:not(.data-background-hash):nth-child(2),
 .reveal .backgrounds > .slide-background:not(.data-background-hash):nth-child(9),
-.reveal .backgrounds > .slide-background:not(.data-background-hash):nth-child(13) {
+.reveal .backgrounds > .slide-background:not(.data-background-hash):nth-child(13),
+.reveal .backgrounds > .slide-background:not(.data-background-hash):nth-child(19) {
     background-color: #000000;
 }
 
