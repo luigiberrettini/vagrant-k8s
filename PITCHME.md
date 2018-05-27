@@ -355,3 +355,56 @@ kubectl describe po basic-pod
 
 kubectl delete po basic-pod
 ```
+
+---
+
+## Namespaces
+<br />
+ - Group K8s resources in separate sets<br />(e.g. tenants, environments)
+ - Not to be confused with Linux namespaces
+ - Resource names must be unique within a namespace
+ - Cluster resources can't be namespaced (e.g. node)
+ - **No inter-namespace pod isolation** out-of-the-box<br />
+   (e.g. network isolation depends on the plugin used)
+
+---
+
+## Namespaces creation demo
+<div class="spacer">&nbsp;</div>
+```shell
+kubectl get ns
+
+kubectl create namespace ns-a
+
+kubectl create -f - <<EOF
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: ns-b
+EOF
+
+kubectl get ns
+
+kubectl create -f 02-basic-pod.yaml -n ns-a
+kubectl create -f 02-basic-pod.yaml -n ns-b
+kubectl get po --all-namespaces
+```
+
+---
+
+## Namespaces deletion demo
+<br />
+```shell
+kubectl get ns
+
+kubectl delete ns ns-a
+kubectl get ns
+kubectl get po --all-namespaces
+
+kubectl delete po --all
+kubectl get ns
+kubectl get po --all-namespaces
+
+kubectl delete ns ns-b
+kubectl get ns
+```
